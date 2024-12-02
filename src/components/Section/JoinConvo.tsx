@@ -16,6 +16,7 @@ export default function JoinConvo() {
   const [userEmail, setUserEmail] = useState<string | null>(null);
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
+          console.log(user)
           if (user?.email) {
             setUserEmail(user.email);
           } else {
@@ -57,9 +58,17 @@ export default function JoinConvo() {
           </CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col items-center space-y-6">
-          <Button onClick={handleJoin} className="w-full max-w-xs sm:max-w-sm" size="lg" disabled={loading}>
-            <span className="text-sm sm:text-base">Throw me in</span>
-          </Button>
+          {
+            userEmail ? (
+              <Button onClick={handleJoin} className="w-full max-w-xs sm:max-w-sm" size="lg" disabled={loading}>
+                <span className="text-sm sm:text-base">Throw me in</span>
+              </Button>
+            ) : (
+              <Button onClick={() => navigate('/')} className="w-full max-w-xs sm:max-w-sm" size="lg" disabled={loading}>
+                <span className="text-sm sm:text-base">Login to Join</span>
+              </Button>
+            )
+          }
         </CardContent>
       </Card>
     </div>
