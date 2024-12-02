@@ -2,7 +2,7 @@ import { format } from 'date-fns';
 import { cn } from "@/lib/utils";
 import { deleteMessage } from '@/lib/firestore.actions';
 import { Button } from '../ui/button';
-import { Delete, DeleteIcon, Trash, Trash2 } from 'lucide-react';
+import { Trash2 } from 'lucide-react';
 
 interface MessageCardProps {
   conversationId: string;

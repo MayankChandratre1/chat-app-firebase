@@ -1,5 +1,5 @@
 import { Button } from '../ui/button'
-import { ArrowLeftCircle, ArrowRight, ChevronRight, MoveDownRight, Outdent, Pencil, WandSparkles } from 'lucide-react'
+import { ArrowLeftCircle} from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import ShareModal from './ShareModal'
 import { useState } from 'react'

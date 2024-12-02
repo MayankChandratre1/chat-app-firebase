@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "../ui/card";
-import { Button } from "../ui/button";
+import { Card, CardHeader, CardTitle,CardContent } from "../ui/card";
 import DeleteModal from "./DeleteModal";
 
 const ConvoCard = ({ convo, userEmail }: { convo: any, userEmail: string | null }) => {

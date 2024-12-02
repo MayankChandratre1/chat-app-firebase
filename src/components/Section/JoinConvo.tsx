@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { MessageCircleQuestion } from 'lucide-react'
-import { onAuthStateChanged, signInWithPopup } from 'firebase/auth'
-import { auth, googleProvider } from '@/config/firebase.config'
+import { onAuthStateChanged } from 'firebase/auth'
+import { auth } from '@/config/firebase.config'
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { getConversationById, joinConversation } from "@/lib/firestore.actions"

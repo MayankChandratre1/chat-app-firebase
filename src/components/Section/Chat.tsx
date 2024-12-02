@@ -1,10 +1,8 @@
 import DashboardLayout from "../Dashboard/Layout"
-import { Card, CardHeader, CardTitle } from "@/components/ui/card"
 import { useEffect, useState } from "react"
 import { getConversations } from "@/lib/firestore.actions"
 import { auth } from "@/config/firebase.config"
 import { onAuthStateChanged } from "firebase/auth";
-import { Link } from "react-router-dom"
 import ConvoCard from "../ConvoPage/ConvoCard"
 
 const Chat = () => {

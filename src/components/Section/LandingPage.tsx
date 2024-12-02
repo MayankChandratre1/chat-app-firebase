@@ -24,7 +24,7 @@ export default function LandingPage() {
     setLoading(true)
     try {
       const result = await signInWithPopup(auth, googleProvider)
-      navigate('/dashboard/chat')
+      navigate('/dashboard/conversations')
       console.log(result)
     } catch (err) {
       console.log(err)
